@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <title>Cajero automatico</title>
+</head>
+<body>
+    <p>
+    <img src="cajero.gif" />
+    </p>
+    <p>
+
+        <input type="text" id="dinero" />
+        <input type="button" value="Extraer" id="extraer">
+    </p>
+    <p id="resultado"></p>
+    <script src="cajero.js"></script>
+    <script type="text/javascript" 
+</body>
+</html> 
+
+
+
+class Billete
+
+{
+  constructor(v, c)
+  {
+    this.valor = v;
+    this.cantidad = c;
+  }
+}
+
+
+function entregarDinero()
+{
+  var t = document.getElementById("dinero");
+  dinero = parseInt(t.value);
+
+  for(var bi of caja)
+  {
+
+    if(dinero > 0)
+    {
+      div = Math.floor(dinero / bi.valor);
+
+      if(div > bi.cantidad)
+      {
+        papeles = bi.cantidad;
+      }
+      else
+      {
+        papeles = div;
+      }
+
+      entregado.push( new Billete(bi.valor, papeles) );
+      dinero = dinero - (bi.valor * papeles);
+    }
+
+  }
+
+  if(dinero > 0)
+
+  {
+    resultado.innerHTML = "Soy un cajero malo, he sido malo y no puedo darte esa cantidad :(";
+  }
+  else
+  {
+    for(var e of entregado)
+    {
+      if(e.cantidad > 0)
+      {
+              resultado.innerHTML += e.cantidad + " billetes de $" + e.valor + "<br />";
+      }
+    }
+  }
+
+}
+
+var caja = [];
+var entregado = [];
+caja.push( new Billete(100, 5) );
+caja.push( new Billete(50, 10) );
+caja.push( new Billete(20, 5) );
+caja.push( new Billete(10, 10) );
+caja.push( new Billete(5, 5) );
+var dinero = 0;
+var div = 0;
+var papeles = 0;
+
+var resultado = document.getElementById("resultado");
+var b = document.getElementById("extraer");
+b.addEventListener("click", entregarDinero); 
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <title>Pakimandex!</title>
+</head>
+class Pakiman
+{
+
+  constructor(n, v, a)
+  {
+    this.imagen = new Image();
+@@ -12,6 +13,8 @@ class Pakiman
+  hablar()
+  {
+    alert(this.nombre);
+
+
+  }
+  mostrar()
+  {
+
+
+
+
+
+
+
+
