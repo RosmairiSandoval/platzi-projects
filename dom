@@ -1,0 +1,16 @@
+var ruta = window.location;
+console.log(ruta);
+        document.write("Estás en " + ruta);
+        
+ <body>
+    <h1>Vamos a jugar con window y con document</h1>
+    <script type="text/javascript">
+        var ruta = window.location;
+        console.log(ruta);
+        document.write("Estás en " + ruta);
+    </script>
+  <script src="codigo.js"></script>
+
+</body>
+
+</html>       
